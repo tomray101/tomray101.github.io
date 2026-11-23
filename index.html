@@ -1,0 +1,1535 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杏吧_专注内容创作的视频品牌官网_登录入口与精彩内容一站直达</title>
+<meta name="description" content="杏吧官方网站，专注原创视频内容与创作者社区，提供登录入口、精选频道、创作者阵地与品牌故事，打造值得信赖的高品质视频内容平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f7f4ee'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23c8563a' stroke-width='5'/%3E%3Cpath d='M27 22 L44 32 L27 42 Z' fill='%23c8563a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --xing-bg:#f7f4ee;
+  --xing-ink:#2a2622;
+  --xing-muted:#6d645c;
+  --xing-line:#e2dacd;
+  --xing-red:#c8563a;
+  --xing-red-dark:#a4432c;
+  --xing-amber:#d99a4e;
+  --xing-card:#fffdf9;
+  --xing-shadow:0 10px 30px rgba(90,60,40,.08);
+  --xing-shadow-hover:0 16px 40px rgba(90,60,40,.16);
+  --xing-radius:16px;
+  --xing-sticky-h:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--xing-bg);
+  color:var(--xing-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+ul,ol{list-style:none;}
+.xing-container{width:100%;max-width:1180px;margin:0 auto;padding:0 22px;}
+.xing-anchor{scroll-margin-top:calc(var(--xing-sticky-h) + 16px);}
+
+/* ---------- 顶部公告条 ---------- */
+.xing-notice-bar{
+  background:linear-gradient(90deg,#2a2622,#3c342c);
+  color:#f4e9db;
+  font-size:13.5px;
+  padding:9px 0;
+}
+.xing-notice-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.xing-notice-tag{
+  flex:none;display:inline-block;background:var(--xing-red);color:#fff;
+  font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;letter-spacing:.5px;
+}
+.xing-notice-roll{margin:0;flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#e8dccb;}
+.xing-notice-roll b{color:#f0b184;font-weight:600;}
+.xing-notice-more{flex:none;font-size:12.5px;color:#f0b184;border-bottom:1px dashed rgba(240,177,132,.6);}
+
+/* ---------- 吸顶头部 ---------- */
+.xing-header{
+  position:sticky;top:0;z-index:80;
+  background:rgba(247,244,238,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--xing-line);
+}
+.xing-header-inner{display:flex;align-items:center;gap:20px;height:64px;}
+.xing-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:1px;flex:none;}
+.xing-logo-mark{
+  width:34px;height:34px;border-radius:10px;background:var(--xing-red);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;
+}
+.xing-nav{display:flex;align-items:center;gap:4px;flex:1;min-width:0;}
+.xing-nav-link{
+  padding:8px 13px;border-radius:8px;font-size:14.5px;color:var(--xing-muted);
+  transition:background .2s,color .2s;white-space:nowrap;
+}
+.xing-nav-link:hover,.xing-nav-link:focus{background:#efe7da;color:var(--xing-red-dark);}
+.xing-head-tools{display:flex;align-items:center;gap:10px;flex:none;}
+.xing-search{position:relative;display:flex;align-items:center;}
+.xing-search input{
+  width:190px;padding:9px 38px 9px 14px;border-radius:999px;border:1px solid var(--xing-line);
+  background:#fffdf9;font-size:13.5px;color:var(--xing-ink);outline:none;transition:border .2s,box-shadow .2s;
+}
+.xing-search input:focus{border-color:var(--xing-red);box-shadow:0 0 0 3px rgba(200,86,58,.12);}
+.xing-search-btn{
+  position:absolute;right:5px;width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--xing-red);
+}
+.xing-search-feedback{
+  position:absolute;top:calc(100% + 8px);right:0;width:250px;background:var(--xing-card);
+  border:1px solid var(--xing-line);border-radius:12px;box-shadow:var(--xing-shadow);
+  padding:10px 12px;font-size:13px;color:var(--xing-muted);display:none;z-index:90;
+}
+.xing-search-feedback.is-active{display:block;}
+.xing-search-feedback strong{color:var(--xing-red);}
+.xing-btn-login{
+  padding:9px 20px;border-radius:999px;background:var(--xing-red);color:#fff;
+  font-size:14px;font-weight:600;letter-spacing:.5px;transition:background .2s,transform .2s;
+}
+.xing-btn-login:hover{background:var(--xing-red-dark);transform:translateY(-1px);}
+.xing-burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--xing-line);align-items:center;justify-content:center;flex-direction:column;gap:4px;}
+.xing-burger span{display:block;width:17px;height:2px;background:var(--xing-ink);border-radius:2px;transition:transform .25s,opacity .25s;}
+.xing-burger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.xing-burger.is-open span:nth-child(2){opacity:0;}
+.xing-burger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+/* ---------- 首屏 ---------- */
+.xing-hero{padding:52px 0 40px;position:relative;overflow:hidden;}
+.xing-hero::before{
+  content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,rgba(217,154,78,.20),rgba(217,154,78,0) 68%);
+  pointer-events:none;
+}
+.xing-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;}
+.xing-hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--xing-red-dark);
+  background:#f5e6dd;padding:5px 14px;border-radius:999px;font-weight:600;letter-spacing:.5px;
+}
+.xing-hero h1{
+  font-size:clamp(38px,5.2vw,60px);line-height:1.16;letter-spacing:2px;margin:18px 0 8px;font-weight:900;
+}
+.xing-hero h1 em{font-style:normal;color:var(--xing-red);}
+.xing-hero-slogan{font-size:17px;color:var(--xing-muted);letter-spacing:1px;margin-bottom:18px;}
+.xing-hero-desc{font-size:15px;color:#4a443f;max-width:560px;}
+.xing-hero-stats{display:flex;gap:30px;margin:26px 0 26px;flex-wrap:wrap;}
+.xing-hero-stat strong{display:block;font-size:28px;font-weight:900;color:var(--xing-red);line-height:1.2;letter-spacing:.5px;}
+.xing-hero-stat span{font-size:12.5px;color:var(--xing-muted);letter-spacing:.5px;}
+.xing-hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.xing-btn-main{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:999px;
+  background:var(--xing-red);color:#fff;font-size:15px;font-weight:700;letter-spacing:.5px;
+  transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 8px 20px rgba(200,86,58,.24);
+}
+.xing-btn-main:hover{background:var(--xing-red-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(200,86,58,.32);}
+.xing-btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:999px;
+  border:1.5px solid #d6c9b8;color:var(--xing-ink);font-size:15px;font-weight:600;transition:border .2s,background .2s;
+}
+.xing-btn-ghost:hover{border-color:var(--xing-red);background:#fbf3ec;color:var(--xing-red-dark);}
+.xing-hero-visual{position:relative;}
+.xing-hero-figure{
+  border-radius:26px;overflow:hidden;box-shadow:0 24px 60px rgba(90,60,40,.18);
+  border:6px solid #fffdf9;background:#fff;
+}
+.xing-hero-badge{
+  position:absolute;left:-14px;bottom:26px;background:var(--xing-card);border:1px solid var(--xing-line);
+  border-radius:16px;padding:12px 18px;box-shadow:var(--xing-shadow);display:flex;align-items:center;gap:12px;
+}
+.xing-hero-badge-icon{width:38px;height:38px;border-radius:50%;background:#f5e6dd;color:var(--xing-red);display:flex;align-items:center;justify-content:center;font-size:16px;}
+.xing-hero-badge b{display:block;font-size:15px;}
+.xing-hero-badge small{font-size:12px;color:var(--xing-muted);}
+
+/* ---------- 通用 section ---------- */
+.xing-section{padding:56px 0;}
+.xing-section-head{margin-bottom:32px;max-width:720px;}
+.xing-section-kicker{
+  display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;color:var(--xing-red);
+  text-transform:uppercase;margin-bottom:8px;
+}
+.xing-section-head h2{font-size:clamp(25px,3.2vw,34px);line-height:1.3;font-weight:900;letter-spacing:.5px;}
+.xing-section-head p{color:var(--xing-muted);font-size:14.5px;margin-top:10px;}
+
+/* ---------- 焦点内容 ---------- */
+.xing-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px;align-items:stretch;}
+.xing-focus-main{
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:var(--xing-radius);
+  overflow:hidden;box-shadow:var(--xing-shadow);transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column;
+}
+.xing-focus-main:hover{box-shadow:var(--xing-shadow-hover);transform:translateY(-3px);}
+.xing-focus-cover{position:relative;aspect-ratio:16/9;background:#f0e7da;}
+.xing-focus-cover svg{width:100%;height:100%;display:block;}
+.xing-play-pill{
+  position:absolute;left:18px;bottom:16px;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(42,38,34,.8);color:#fff;font-size:12.5px;padding:5px 13px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.xing-focus-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1;}
+.xing-tag{
+  display:inline-block;font-size:12px;color:var(--xing-red-dark);background:#f5e6dd;
+  padding:2px 10px;border-radius:999px;margin:0 6px 6px 0;font-weight:600;
+}
+.xing-focus-body h3{font-size:21px;line-height:1.45;margin:4px 0 10px;font-weight:800;}
+.xing-focus-body p{font-size:14px;color:var(--xing-muted);flex:1;}
+.xing-meta{display:flex;align-items:center;gap:14px;font-size:12.5px;color:var(--xing-muted);margin-top:14px;flex-wrap:wrap;}
+.xing-meta-dot{width:3px;height:3px;border-radius:50%;background:#c4b8a8;display:inline-block;}
+.xing-focus-side{display:flex;flex-direction:column;gap:16px;}
+.xing-focus-item{
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:14px;
+  padding:18px 20px;box-shadow:var(--xing-shadow);transition:box-shadow .25s,transform .25s;flex:1;
+}
+.xing-focus-item:hover{box-shadow:var(--xing-shadow-hover);transform:translateY(-2px);}
+.xing-focus-item h3{font-size:16.5px;line-height:1.45;margin:2px 0 6px;font-weight:800;}
+.xing-focus-item p{font-size:13px;color:var(--xing-muted);}
+
+/* ---------- 视频列表 ---------- */
+.xing-video-list{display:flex;flex-direction:column;gap:14px;}
+.xing-video-row{
+  display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:18px;align-items:center;
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:14px;
+  padding:16px 20px;transition:box-shadow .2s,transform .2s,border-color .2s;
+}
+.xing-video-row:hover{box-shadow:var(--xing-shadow-hover);transform:translateY(-2px);border-color:#d9c9b6;}
+.xing-video-rank{
+  width:44px;height:44px;border-radius:12px;background:#f5e6dd;color:var(--xing-red-dark);
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px;
+}
+.xing-video-row-main{min-width:0;}
+.xing-video-row-main h3{font-size:16.5px;font-weight:800;line-height:1.4;margin-bottom:4px;}
+.xing-video-row-main p{font-size:13px;color:var(--xing-muted);margin-bottom:6px;}
+.xing-video-row-meta{font-size:12px;color:var(--xing-muted);display:flex;gap:12px;flex-wrap:wrap;}
+.xing-video-ops{display:flex;gap:8px;flex:none;}
+.xing-icon-btn{
+  width:36px;height:36px;border-radius:10px;border:1px solid var(--xing-line);
+  display:inline-flex;align-items:center;justify-content:center;font-size:14px;color:var(--xing-muted);
+  transition:background .2s,color .2s,border-color .2s;
+}
+.xing-icon-btn:hover{background:#f5e6dd;color:var(--xing-red);border-color:#e8c9b8;}
+.xing-icon-btn.is-liked{background:var(--xing-red);color:#fff;border-color:var(--xing-red);}
+.xing-icon-btn.is-saved{background:#f0b184;color:#5a3a24;border-color:#f0b184;}
+
+/* ---------- 图文交替列表 ---------- */
+.xing-stagger{display:flex;flex-direction:column;gap:34px;}
+.xing-stagger-item{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:28px;align-items:center;}
+.xing-stagger-item:nth-child(even){grid-template-columns:minmax(0,.58fr) minmax(0,.42fr);}
+.xing-stagger-item:nth-child(even) .xing-stagger-media{order:2;}
+.xing-stagger-media{
+  border-radius:18px;overflow:hidden;border:1px solid var(--xing-line);box-shadow:var(--xing-shadow);background:#f0e7da;
+}
+.xing-stagger-copy h3{font-size:21px;font-weight:800;line-height:1.4;margin-bottom:10px;}
+.xing-stagger-copy p{font-size:14.5px;color:var(--xing-muted);}
+.xing-stagger-list{margin:14px 0 0;display:flex;flex-direction:column;gap:8px;}
+.xing-stagger-list li{position:relative;padding-left:18px;font-size:13.5px;color:#4a443f;}
+.xing-stagger-list li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--xing-amber);}
+
+/* ---------- 创作者 ---------- */
+.xing-authors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.xing-author{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:16px;
+  padding:20px;box-shadow:var(--xing-shadow);transition:box-shadow .25s,transform .25s;
+}
+.xing-author:hover{box-shadow:var(--xing-shadow-hover);transform:translateY(-2px);}
+.xing-avatar{
+  width:64px;height:64px;border-radius:50%;overflow:hidden;flex:none;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:900;font-size:22px;letter-spacing:1px;
+}
+.xing-author-name{font-size:16.5px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.xing-author-field{font-size:12px;color:var(--xing-red-dark);background:#f5e6dd;border-radius:999px;padding:1px 9px;font-weight:600;}
+.xing-author-nums{font-size:12px;color:var(--xing-muted);margin:5px 0 8px;display:flex;gap:12px;flex-wrap:wrap;}
+.xing-author-desc{font-size:13px;color:#4a443f;line-height:1.7;}
+.xing-author-btn{
+  margin-top:10px;font-size:12.5px;color:var(--xing-red-dark);border-bottom:1px dashed #d9a68e;padding-bottom:1px;
+}
+
+/* ---------- 专题 ---------- */
+.xing-topics-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.xing-topic{
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:16px;
+  padding:22px;box-shadow:var(--xing-shadow);display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;
+}
+.xing-topic:hover{box-shadow:var(--xing-shadow-hover);transform:translateY(-3px);}
+.xing-topic-status{
+  display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:700;padding:2px 10px;
+  border-radius:999px;background:#eef4ea;color:#4d7a3e;margin-bottom:10px;letter-spacing:.5px;
+}
+.xing-topic-status.is-updating{background:#fdf0e2;color:#a06a22;}
+.xing-topic h3{font-size:17.5px;font-weight:800;margin-bottom:8px;line-height:1.4;}
+.xing-topic p{font-size:13px;color:var(--xing-muted);margin-bottom:14px;}
+.xing-topic ul{display:flex;flex-direction:column;gap:8px;margin-top:auto;}
+.xing-topic ul li{font-size:13px;position:relative;padding-left:16px;color:#4a443f;}
+.xing-topic ul li::before{content:"›";position:absolute;left:2px;top:-1px;color:var(--xing-red);font-weight:700;}
+
+/* ---------- 数据榜单 ---------- */
+.xing-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.xing-rank-col{
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:16px;padding:22px;box-shadow:var(--xing-shadow);
+}
+.xing-rank-col h3{font-size:16px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.xing-rank-col h3 span{font-size:12px;color:var(--xing-muted);font-weight:500;}
+.xing-rank-list{margin-top:14px;display:flex;flex-direction:column;gap:12px;}
+.xing-rank-list li{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13.5px;}
+.xing-rank-num{font-weight:900;color:#c4b8a8;font-size:14px;}
+.xing-rank-list li:nth-child(1) .xing-rank-num{color:var(--xing-red);}
+.xing-rank-list li:nth-child(2) .xing-rank-num{color:var(--xing-amber);}
+.xing-rank-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#4a443f;}
+.xing-rank-val{font-size:12px;color:var(--xing-muted);}
+
+/* ---------- 评价 ---------- */
+.xing-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.xing-review{
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:14px;padding:18px 20px;
+  box-shadow:var(--xing-shadow);position:relative;
+}
+.xing-review-quote{font-size:26px;color:#e8d5c5;line-height:.8;font-family:Georgia,serif;margin-bottom:4px;}
+.xing-review p{font-size:13.5px;color:#4a443f;line-height:1.75;}
+.xing-review footer{margin-top:12px;font-size:12px;color:var(--xing-muted);display:flex;align-items:center;gap:8px;}
+.xing-review-avatar{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;}
+
+/* ---------- 深度解析 ---------- */
+.xing-depth{background:#fffdf9;border-top:1px solid var(--xing-line);border-bottom:1px solid var(--xing-line);}
+.xing-depth h2{font-size:clamp(25px,3.2vw,32px);font-weight:900;margin-bottom:8px;}
+.xing-depth > .xing-container > p{color:var(--xing-muted);font-size:14.5px;max-width:760px;}
+.xing-depth-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 40px;margin-top:32px;}
+.xing-depth-block h3{font-size:18px;font-weight:800;margin-bottom:10px;color:var(--xing-red-dark);display:flex;align-items:center;gap:9px;}
+.xing-depth-block h3::before{content:"";width:5px;height:18px;border-radius:3px;background:var(--xing-amber);display:inline-block;}
+.xing-depth-block p{font-size:14px;color:#4a443f;line-height:1.9;}
+.xing-depth-highlight{
+  grid-column:1 / -1;background:#f9f1e8;border:1px dashed #e0cbb4;border-radius:14px;
+  padding:20px 24px;font-size:14px;color:#5a4a3a;line-height:1.9;
+}
+
+/* ---------- 动态 / FAQ / 合作 ---------- */
+.xing-split-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:34px;align-items:start;}
+.xing-news-list{display:flex;flex-direction:column;gap:0;}
+.xing-news-item{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px dashed var(--xing-line);}
+.xing-news-item:first-child{padding-top:0;}
+.xing-news-date{font-size:12.5px;color:var(--xing-muted);font-weight:600;padding-top:2px;}
+.xing-news-item h3{font-size:15.5px;font-weight:800;margin-bottom:3px;}
+.xing-news-item p{font-size:13px;color:var(--xing-muted);}
+.xing-faq-list{display:flex;flex-direction:column;gap:10px;}
+.xing-faq-item{
+  background:var(--xing-card);border:1px solid var(--xing-line);border-radius:12px;padding:0 18px;transition:border-color .2s;
+}
+.xing-faq-item[open]{border-color:#e0cbb4;background:#fffaf3;}
+.xing-faq-item summary{
+  list-style:none;cursor:pointer;padding:14px 0;font-size:14.5px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.xing-faq-item summary::-webkit-details-marker{display:none;}
+.xing-faq-item summary::after{content:"+";font-size:18px;color:var(--xing-red);font-weight:400;flex:none;transition:transform .2s;}
+.xing-faq-item[open] summary::after{transform:rotate(45deg);}
+.xing-faq-item p{font-size:13.5px;color:var(--xing-muted);padding-bottom:16px;line-height:1.8;}
+.xing-partner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px;}
+.xing-partner{
+  border:1px solid var(--xing-line);border-radius:12px;background:var(--xing-card);
+  padding:16px;font-size:14px;font-weight:700;color:#4a443f;text-align:center;transition:border-color .2s,color .2s;
+}
+.xing-partner:hover{border-color:var(--xing-red);color:var(--xing-red-dark);}
+
+/* ---------- 投稿 CTA ---------- */
+.xing-submit-band{
+  background:linear-gradient(120deg,#2a2622,#43382e);color:#f4e9db;border-radius:22px;
+  padding:38px 42px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;
+  box-shadow:0 20px 50px rgba(42,38,34,.24);
+}
+.xing-submit-band h2{font-size:clamp(22px,2.6vw,28px);font-weight:900;margin-bottom:6px;letter-spacing:.5px;}
+.xing-submit-band p{font-size:14px;color:#d8c9b8;max-width:560px;}
+.xing-submit-band .xing-btn-main{background:#f0b184;color:#3a2a1c;box-shadow:none;}
+.xing-submit-band .xing-btn-main:hover{background:#f5c49e;}
+
+/* ---------- 页脚 ---------- */
+.xing-footer{background:#241f1b;color:#b9ab9c;padding:52px 0 0;margin-top:60px;}
+.xing-footer-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,.7fr));gap:34px;}
+.xing-footer-brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;color:#f4e9db;margin-bottom:14px;letter-spacing:1px;}
+.xing-footer p{font-size:13px;line-height:1.9;color:#9a8d80;}
+.xing-footer h3{font-size:13.5px;color:#e8dccb;font-weight:800;margin-bottom:12px;letter-spacing:.5px;}
+.xing-footer ul{display:flex;flex-direction:column;gap:9px;}
+.xing-footer ul a{font-size:13px;color:#9a8d80;transition:color .2s;}
+.xing-footer ul a:hover{color:#f0b184;}
+.xing-footer-bottom{
+  border-top:1px solid #3a332d;margin-top:38px;padding:18px 0;font-size:12px;color:#7d7164;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* ---------- 弹层 / Toast / 回到顶部 ---------- */
+.xing-modal{
+  position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;
+  background:rgba(36,31,27,.55);backdrop-filter:blur(3px);
+}
+.xing-modal.is-open{display:flex;}
+.xing-modal-card{
+  background:var(--xing-card);border-radius:20px;max-width:520px;width:100%;padding:28px 30px;
+  box-shadow:0 30px 80px rgba(0,0,0,.3);position:relative;max-height:86vh;overflow:auto;
+}
+.xing-modal-card h3{font-size:20px;font-weight:900;margin-bottom:8px;padding-right:30px;}
+.xing-modal-card p{font-size:14px;color:var(--xing-muted);line-height:1.85;}
+.xing-modal-close{
+  position:absolute;right:16px;top:16px;width:32px;height:32px;border-radius:50%;
+  background:#f5e6dd;color:var(--xing-red-dark);font-size:15px;display:flex;align-items:center;justify-content:center;
+}
+.xing-modal-field{margin-top:14px;}
+.xing-modal-field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#4a443f;}
+.xing-modal-field input,.xing-modal-field textarea{
+  width:100%;border:1px solid var(--xing-line);border-radius:10px;padding:10px 13px;font-size:13.5px;
+  font-family:inherit;background:#fffdf9;color:var(--xing-ink);outline:none;resize:vertical;
+}
+.xing-modal-field input:focus,.xing-modal-field textarea:focus{border-color:var(--xing-red);box-shadow:0 0 0 3px rgba(200,86,58,.1);}
+.xing-modal-submit{
+  margin-top:18px;width:100%;padding:12px;border-radius:10px;background:var(--xing-red);color:#fff;
+  font-size:14.5px;font-weight:700;transition:background .2s;
+}
+.xing-modal-submit:hover{background:var(--xing-red-dark);}
+.xing-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);z-index:300;
+  background:#2a2622;color:#f4e9db;font-size:13.5px;padding:11px 22px;border-radius:999px;
+  box-shadow:0 12px 30px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;white-space:nowrap;
+}
+.xing-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.xing-backtotop{
+  position:fixed;right:24px;bottom:30px;z-index:90;width:46px;height:46px;border-radius:50%;
+  background:var(--xing-red);color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px rgba(200,86,58,.34);opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:opacity .25s,transform .25s,background .2s;
+}
+.xing-backtotop.is-show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.xing-backtotop:hover{background:var(--xing-red-dark);}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1020px){
+  .xing-hero-grid{grid-template-columns:1fr;gap:32px;}
+  .xing-hero-visual{max-width:640px;}
+  .xing-focus-grid{grid-template-columns:1fr;}
+  .xing-stagger-item,.xing-stagger-item:nth-child(even){grid-template-columns:1fr;}
+  .xing-stagger-item:nth-child(even) .xing-stagger-media{order:0;}
+  .xing-depth-body{grid-template-columns:1fr;}
+  .xing-footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:860px){
+  .xing-nav{
+    position:absolute;top:100%;left:0;right:0;background:var(--xing-bg);
+    border-bottom:1px solid var(--xing-line);flex-direction:column;align-items:stretch;
+    padding:10px 18px 18px;gap:2px;display:none;box-shadow:0 18px 30px rgba(90,60,40,.1);
+  }
+  .xing-nav.is-open{display:flex;}
+  .xing-nav-link{padding:11px 12px;}
+  .xing-burger{display:flex;}
+  .xing-search input{width:150px;}
+  .xing-topics-grid{grid-template-columns:1fr;}
+  .xing-rank-grid{grid-template-columns:1fr;}
+  .xing-authors-grid{grid-template-columns:1fr;}
+  .xing-review-grid{grid-template-columns:1fr;}
+  .xing-split-grid{grid-template-columns:1fr;}
+  .xing-submit-band{grid-template-columns:1fr;padding:30px 26px;}
+  .xing-video-row{grid-template-columns:44px minmax(0,1fr);}
+  .xing-video-ops{grid-column:1 / -1;justify-content:flex-end;}
+  .xing-news-item{grid-template-columns:70px minmax(0,1fr);}
+}
+@media (max-width:560px){
+  .xing-hero{padding:36px 0 28px;}
+  .xing-hero-stats{gap:20px;}
+  .xing-hero-stat strong{font-size:23px;}
+  .xing-hero-actions .xing-btn-main,.xing-hero-actions .xing-btn-ghost{flex:1;justify-content:center;}
+  .xing-header-inner{gap:10px;}
+  .xing-search{display:none;}
+  .xing-btn-login{padding:8px 15px;font-size:13px;}
+  .xing-footer-grid{grid-template-columns:1fr;}
+  .xing-section{padding:42px 0;}
+  .xing-partner-grid{grid-template-columns:1fr;}
+  .xing-hero-badge{left:8px;bottom:12px;padding:9px 13px;}
+  .xing-review{padding:16px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="xing-notice-bar">
+  <div class="xing-container xing-notice-inner">
+    <span class="xing-notice-tag">官方公告</span>
+    <p class="xing-notice-roll"><b>11月22日</b> 上线「城市夜行」专题第 3 期；创作者扶持计划第二季开放报名，投稿通道同步开启。</p>
+    <a class="xing-notice-more" href="#xing-news">查看全部动态</a>
+  </div>
+</div>
+
+<header class="xing-header">
+  <div class="xing-container xing-header-inner">
+    <a class="xing-logo" href="#xing-top" aria-label="杏吧官网首页">
+      <span class="xing-logo-mark">杏</span>
+      <span>杏吧</span>
+    </a>
+    <nav class="xing-nav" id="xingNav" aria-label="主导航">
+      <a class="xing-nav-link" href="#xing-focus">焦点</a>
+      <a class="xing-nav-link" href="#xing-videos">视频</a>
+      <a class="xing-nav-link" href="#xing-topics">专题</a>
+      <a class="xing-nav-link" href="#xing-authors">创作者</a>
+      <a class="xing-nav-link" href="#xing-rank">榜单</a>
+      <a class="xing-nav-link" href="#xing-depth">品牌解析</a>
+      <a class="xing-nav-link" href="#xing-faq">帮助</a>
+    </nav>
+    <div class="xing-head-tools">
+      <div class="xing-search">
+        <input type="text" id="xingSearchInput" placeholder="搜索内容、创作者" aria-label="站内搜索">
+        <button class="xing-search-btn" type="button" id="xingSearchBtn" aria-label="搜索">⌕</button>
+        <div class="xing-search-feedback" id="xingSearchFeedback" role="status" aria-live="polite"></div>
+      </div>
+      <button class="xing-btn-login" type="button" data-xing-modal="login">登录入口</button>
+      <button class="xing-burger" type="button" id="xingBurger" aria-label="展开导航" aria-expanded="false" aria-controls="xingNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="xing-top">
+
+  <!-- S2 品牌首屏 -->
+  <section class="xing-hero">
+    <div class="xing-container xing-hero-grid">
+      <div>
+        <span class="xing-hero-kicker">杏吧 · 官方网站 · 视频内容品牌</span>
+        <h1>杏吧<em>，</em>记录真实的内容现场</h1>
+        <p class="xing-hero-slogan">原创 · 高清 · 专业｜一个持续运营的视频社区</p>
+        <p class="xing-hero-desc">作为深耕生活影像与人文记录的垂直视频平台，杏吧官方网站致力于为创作者与企业搭建高品质内容生态：以原创为根、以正版高清为底、以真实故事连接每一位观众。从城市夜行到山野慢活，从手艺现场到行业观察，我们把镜头交给认真生活的人，让值得被看见的内容被更多人看见。</p>
+        <div class="xing-hero-stats">
+          <div class="xing-hero-stat"><strong>4,860+</strong><span>原创正版视频</span></div>
+          <div class="xing-hero-stat"><strong>1,320位</strong><span>签约创作者</span></div>
+          <div class="xing-hero-stat"><strong>9年</strong><span>持续运营</span></div>
+        </div>
+        <div class="xing-hero-actions">
+          <button class="xing-btn-main" type="button" data-xing-modal="login">进入登录入口 →</button>
+          <a class="xing-btn-ghost" href="#xing-videos">浏览精品内容</a>
+        </div>
+      </div>
+      <div class="xing-hero-visual">
+        <div class="xing-hero-figure">
+          <svg viewBox="0 0 800 560" role="img" aria-label="杏吧官网首屏主视觉：城市黄昏屋顶上的创作团队架设摄影机记录远方信号塔与飞鸟">
+            <defs>
+              <linearGradient id="xingSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3b2f3f"/>
+                <stop offset=".45" stop-color="#8c5a4e"/>
+                <stop offset=".75" stop-color="#d98b52"/>
+                <stop offset="1" stop-color="#f2c290"/>
+              </linearGradient>
+              <linearGradient id="xingGround" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2e2624"/>
+                <stop offset="1" stop-color="#1b1715"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="560" fill="url(#xingSky)"/>
+            <circle cx="620" cy="150" r="58" fill="#ffe0b0" opacity=".92"/>
+            <circle cx="620" cy="150" r="92" fill="#ffd9a3" opacity=".18"/>
+            <path d="M0 380 L90 330 L160 356 L250 300 L330 348 L420 312 L520 360 L610 322 L700 360 L800 330 L800 560 L0 560 Z" fill="#6b4a44" opacity=".55"/>
+            <rect y="400" width="800" height="160" fill="url(#xingGround)"/>
+            <rect x="60" y="300" width="90" height="110" fill="#2b2321"/>
+            <rect x="168" y="252" width="70" height="158" fill="#241d1c"/>
+            <rect x="256" y="198" width="46" height="212" fill="#1f1918"/>
+            <path d="M279 198 L279 150 M270 158 L279 144 L288 158" stroke="#c8563a" stroke-width="3" fill="none"/>
+            <circle cx="279" cy="144" r="4" fill="#f0b184"/>
+            <rect x="330" y="272" width="110" height="138" fill="#2a2220"/>
+            <rect x="470" y="236" width="74" height="174" fill="#231c1b"/>
+            <rect x="572" y="292" width="128" height="118" fill="#2c2422"/>
+            <rect x="720" y="246" width="54" height="164" fill="#211a19"/>
+            <g fill="#ffd9a3">
+              <rect x="76" y="318" width="10" height="12" opacity=".85"/>
+              <rect x="104" y="318" width="10" height="12" opacity=".5"/>
+              <rect x="182" y="276" width="9" height="12" opacity=".8"/>
+              <rect x="204" y="276" width="9" height="12" opacity=".4"/>
+              <rect x="348" y="296" width="11" height="13" opacity=".75"/>
+              <rect x="372" y="296" width="11" height="13" opacity=".45"/>
+              <rect x="486" y="262" width="9" height="12" opacity=".85"/>
+              <rect x="510" y="262" width="9" height="12" opacity=".55"/>
+              <rect x="592" y="316" width="12" height="13" opacity=".7"/>
+              <rect x="740" y="272" width="9" height="11" opacity=".6"/>
+            </g>
+            <rect x="300" y="400" width="330" height="16" rx="4" fill="#3a302c"/>
+            <rect x="316" y="416" width="10" height="60" fill="#332a27"/>
+            <rect x="604" y="416" width="10" height="60" fill="#332a27"/>
+            <g>
+              <rect x="430" y="368" width="120" height="34" rx="6" fill="#141110"/>
+              <path d="M550 380 L580 368 L580 400 L550 388 Z" fill="#141110"/>
+              <circle cx="470" cy="368" r="9" fill="#c8563a"/>
+              <rect x="452" y="386" width="16" height="14" fill="#141110"/>
+            </g>
+            <g stroke="#1c1716" stroke-width="9" stroke-linecap="round">
+              <path d="M368 404 L368 372"/>
+              <path d="M356 404 L380 404"/>
+            </g>
+            <circle cx="368" cy="352" r="12" fill="#1c1716"/>
+            <path d="M368 364 L368 392" stroke="#1c1716" stroke-width="11" stroke-linecap="round"/>
+            <g fill="none" stroke="#f5e6dd" stroke-width="2" opacity=".8">
+              <path d="M120 120 q12 -10 24 0"/>
+              <path d="M156 104 q14 -12 28 0"/>
+              <path d="M660 210 q10 -8 20 0"/>
+            </g>
+            <g fill="#f5e6dd" opacity=".8">
+              <circle cx="700" cy="90" r="2"/>
+              <circle cx="742" cy="126" r="2.4"/>
+              <circle cx="96" cy="200" r="2"/>
+              <circle cx="58" cy="160" r="1.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="xing-hero-badge">
+          <span class="xing-hero-badge-icon">◉</span>
+          <div>
+            <b>今日官方发布更新</b>
+            <small>12 条新内容 · 正在直播 3 场</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 -->
+  <section class="xing-section xing-anchor" id="xing-focus">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Focus / 焦点推荐</span>
+        <h2>杏吧本周焦点：把镜头交给认真生活的人</h2>
+        <p>编辑团队从杏吧官方内容库中挑出本周最值得观看的原创作品，涵盖城市探索、手作现场与人物访谈。所有内容均为正版高清发布，可在杏吧官网直接查看完整节目。</p>
+      </div>
+      <div class="xing-focus-grid">
+        <article class="xing-focus-main">
+          <div class="xing-focus-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="焦点视频封面：老城区夜巷中手艺人提灯走过青石路，两旁挂满手工灯笼">
+              <defs>
+                <linearGradient id="xingAlley" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1d2530"/>
+                  <stop offset="1" stop-color="#0f141a"/>
+                </linearGradient>
+                <radialGradient id="xingLampGlow" cx=".5" cy=".5" r=".5">
+                  <stop offset="0" stop-color="#ffcf8a" stop-opacity=".85"/>
+                  <stop offset="1" stop-color="#ffcf8a" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#xingAlley)"/>
+              <path d="M0 0 L240 96 L240 360 L0 360 Z" fill="#182028"/>
+              <path d="M640 0 L410 100 L410 360 L640 360 Z" fill="#141b22"/>
+              <path d="M240 96 L410 100 L360 360 L290 360 Z" fill="#232c35"/>
+              <path d="M290 360 L360 360 L340 200 L310 200 Z" fill="#2f3a44"/>
+              <circle cx="322" cy="150" r="120" fill="url(#xingLampGlow)" opacity=".4"/>
+              <g>
+                <circle cx="300" cy="120" r="14" fill="#ffcf8a" opacity=".9"/>
+                <path d="M300 134 L300 220" stroke="#0f141a" stroke-width="4"/>
+                <circle cx="300" cy="150" r="46" fill="url(#xingLampGlow)"/>
+                <rect x="284" y="112" width="32" height="4" rx="2" fill="#3a302c"/>
+                <circle cx="300" cy="120" r="9" fill="#ffb85c"/>
+              </g>
+              <g>
+                <circle cx="388" cy="180" r="10" fill="#f0b184" opacity=".75"/>
+                <path d="M388 190 L388 246" stroke="#0f141a" stroke-width="3"/>
+                <circle cx="388" cy="200" r="32" fill="url(#xingLampGlow)" opacity=".8"/>
+              </g>
+              <rect x="0" y="330" width="640" height="30" fill="#0b0f13"/>
+              <path d="M300 255 L300 330" stroke="#0b0f13" stroke-width="12" stroke-linecap="round"/>
+              <circle cx="300" cy="240" r="15" fill="#0b0f13"/>
+              <path d="M282 268 L318 268 L326 330 L274 330 Z" fill="#0b0f13"/>
+              <g fill="#ffd9a3" opacity=".5">
+                <rect x="60" y="130" width="6" height="10"/>
+                <rect x="130" y="170" width="5" height="9"/>
+                <rect x="500" y="150" width="6" height="10"/>
+                <rect x="560" y="200" width="5" height="9"/>
+              </g>
+            </svg>
+            <span class="xing-play-pill">▶ 24:18 · 高清正版</span>
+          </div>
+          <div class="xing-focus-body">
+            <div>
+              <span class="xing-tag">城市探索</span>
+              <span class="xing-tag">品牌故事</span>
+              <span class="xing-tag">人物访谈</span>
+            </div>
+            <h3>《夜行灯匠》：一个人守着一条巷子的第三十六年</h3>
+            <p>杏吧原创纪录短片。我们跟着灯匠老周走了三个夜晚，从糊纸、刷浆到点灯，把一门快要消失的手艺完整记录下来。他是这条巷子最后的灯匠，也是杏吧内容社区里最被观众牵挂的创作者之一。</p>
+            <div class="xing-meta">
+              <span>创作者：灯下老周</span><span class="xing-meta-dot"></span>
+              <span>播放 128.6万</span><span class="xing-meta-dot"></span>
+              <span>点赞 4.2万</span><span class="xing-meta-dot"></span>
+              <span>收藏 1.8万</span>
+            </div>
+            <div class="xing-meta" style="margin-top:16px;">
+              <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+              <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+              <button class="xing-icon-btn" type="button" data-xing-modal="feedback" aria-label="反馈">⋯</button>
+            </div>
+          </div>
+        </article>
+        <div class="xing-focus-side">
+          <article class="xing-focus-item">
+            <div><span class="xing-tag">手作DIY</span><span class="xing-tag">深度测评</span></div>
+            <h3>从学徒到独立品牌：一把木椅的 14 天制作日记</h3>
+            <p>杏吧手作频道年度企划，完整记录一个木作家从选料到上蜡的全过程，附带工具清单与踩坑记录。</p>
+            <div class="xing-meta"><span>播放 86.4万</span><span class="xing-meta-dot"></span><span>收藏 2.6万</span></div>
+          </article>
+          <article class="xing-focus-item">
+            <div><span class="xing-tag">在地文化</span><span class="xing-tag">城市探索</span></div>
+            <h3>早市 5:30：一条老街苏醒前的两百分钟</h3>
+            <p>杏吧城市影像组第七次回访这条老街，摊主、快递员、上学的孩子陆续出现，一天就这样开始。</p>
+            <div class="xing-meta"><span>播放 62.1万</span><span class="xing-meta-dot"></span><span>点赞 2.1万</span></div>
+          </article>
+          <article class="xing-focus-item">
+            <div><span class="xing-tag">人物访谈</span><span class="xing-tag">深度内容</span></div>
+            <h3>对话声音采集师：我在城市的缝隙里录了十年风</h3>
+            <p>一小时谈创作、谈设备、谈为什么我们总要回到现场。杏吧对谈栏目第 22 期完整版已上线。</p>
+            <div class="xing-meta"><span>播放 47.8万</span><span class="xing-meta-dot"></span><span>评论 3,142</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 视频列表 -->
+  <section class="xing-section xing-anchor" id="xing-videos" style="padding-top:12px;">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Hot / 热门视频</span>
+        <h2>杏吧视频热榜：本周被反复观看的原创作品</h2>
+        <p>数据来自杏吧官方网站客户端与网页端近七日的真实观看记录，榜单每日更新一次。</p>
+      </div>
+      <div class="xing-video-list" id="xingVideoList">
+        <article class="xing-video-row">
+          <div class="xing-video-rank">01</div>
+          <div class="xing-video-row-main">
+            <h3>山野慢活 04｜把一间旧屋收拾成一个可以住很久的地方</h3>
+            <p>三个月、两个人、一院旧瓦。从排水到砌灶，所有预算和工序都写在本期视频说明里，适合想尝试乡村改造的观众。</p>
+            <div class="xing-video-row-meta"><span>#生活方式</span><span>#教程干货</span><span>作者：慢屋夫妇</span><span>播放 203.5万</span><span>点赞 8.7万</span></div>
+          </div>
+          <div class="xing-video-ops">
+            <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+            <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+            <button class="xing-icon-btn" type="button" data-xing-copy aria-label="复制链接">⧉</button>
+          </div>
+        </article>
+        <article class="xing-video-row">
+          <div class="xing-video-rank">02</div>
+          <div class="xing-video-row-main">
+            <h3>一个人做咖啡的第 900 天：小店的账本、菜单与回头客</h3>
+            <p>杏吧财经与生活方式频道联合出品，聊的是咖啡，算的是小生意怎么活下来，附完整成本表格。</p>
+            <div class="xing-video-row-meta"><span>#商业观察</span><span>#日常记录</span><span>作者：半糖小馆</span><span>播放 176.2万</span><span>点赞 6.9万</span></div>
+          </div>
+          <div class="xing-video-ops">
+            <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+            <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+            <button class="xing-icon-btn" type="button" data-xing-copy aria-label="复制链接">⧉</button>
+          </div>
+        </article>
+        <article class="xing-video-row">
+          <div class="xing-video-rank">03</div>
+          <div class="xing-video-row-main">
+            <h3>城市夜行 03｜末班车之后，还有谁在街上</h3>
+            <p>凌晨一点到四点，我们跟着代驾、环卫工和便利店店员走了三条街，记录城市入睡后的另一面。</p>
+            <div class="xing-video-row-meta"><span>#城市探索</span><span>#治愈影像</span><span>作者：杏吧影像组</span><span>播放 152.8万</span><span>点赞 5.4万</span></div>
+          </div>
+          <div class="xing-video-ops">
+            <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+            <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+            <button class="xing-icon-btn" type="button" data-xing-copy aria-label="复制链接">⧉</button>
+          </div>
+        </article>
+        <article class="xing-video-row">
+          <div class="xing-video-rank">04</div>
+          <div class="xing-video-row-main">
+            <h3>剪辑室里的一百个夜晚：杏吧创作者幕后工作流公开</h3>
+            <p>从素材整理到成片导出，一位纪录片剪辑师的真实工作流，包含软件设置、备份策略与节奏判断。</p>
+            <div class="xing-video-row-meta"><span>#创作幕后</span><span>#实用技巧</span><span>作者：剪辑师阿岩</span><span>播放 98.3万</span><span>点赞 4.1万</span></div>
+          </div>
+          <div class="xing-video-ops">
+            <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+            <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+            <button class="xing-icon-btn" type="button" data-xing-copy aria-label="复制链接">⧉</button>
+          </div>
+        </article>
+        <article class="xing-video-row">
+          <div class="xing-video-rank">05</div>
+          <div class="xing-video-row-main">
+            <h3>周末去爬山：三条适合新手的路线与装备清单</h3>
+            <p>杏吧户外频道实测，路线难度、补水点、撤离方案写得很细，第一次上山也能心里有数。</p>
+            <div class="xing-video-row-meta"><span>#户外活动</span><span>#攻略</span><span>作者：北坡小队</span><span>播放 74.6万</span><span>点赞 3.3万</span></div>
+          </div>
+          <div class="xing-video-ops">
+            <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+            <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+            <button class="xing-icon-btn" type="button" data-xing-copy aria-label="复制链接">⧉</button>
+          </div>
+        </article>
+        <article class="xing-video-row">
+          <div class="xing-video-rank">06</div>
+          <div class="xing-video-row-main">
+            <h3>旧物修理铺：一台修了四十年的收音机</h3>
+            <p>杏吧口碑系列短片。维修师傅不多话，手上功夫把一段旧时光重新接上，评论区很多人说看哭了。</p>
+            <div class="xing-video-row-meta"><span>#手作DIY</span><span>#情感故事</span><span>作者：修理铺小马</span><span>播放 66.9万</span><span>点赞 2.9万</span></div>
+          </div>
+          <div class="xing-video-ops">
+            <button class="xing-icon-btn" type="button" data-xing-like aria-label="点赞">♡</button>
+            <button class="xing-icon-btn" type="button" data-xing-save aria-label="收藏">☆</button>
+            <button class="xing-icon-btn" type="button" data-xing-copy aria-label="复制链接">⧉</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图文交替单列 -->
+  <section class="xing-section" style="padding-top:10px;">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Stories / 深度图文</span>
+        <h2>杏吧精品内容：三个被反复回看的现场</h2>
+        <p>视频之外，我们也把现场写成图文，方便你慢慢读、反复读。</p>
+      </div>
+      <div class="xing-stagger">
+        <article class="xing-stagger-item">
+          <div class="xing-stagger-media">
+            <svg viewBox="0 0 520 330" role="img" aria-label="图文配图：清晨的旧货市场摊位摆满老式相机、钟表与铁皮玩具">
+              <rect width="520" height="330" fill="#e9dfcd"/>
+              <rect y="0" width="520" height="150" fill="#d8cbb4"/>
+              <path d="M0 150 L520 150 L520 330 L0 330 Z" fill="#c9b79b"/>
+              <rect x="40" y="196" width="440" height="18" rx="3" fill="#8a6f4e"/>
+              <rect x="64" y="214" width="14" height="86" fill="#7c6347"/>
+              <rect x="442" y="214" width="14" height="86" fill="#7c6347"/>
+              <g>
+                <rect x="82" y="150" width="60" height="46" rx="4" fill="#3c3a36"/>
+                <circle cx="112" cy="173" r="15" fill="#5b5750"/>
+                <circle cx="112" cy="173" r="8" fill="#26241f"/>
+                <rect x="92" y="144" width="20" height="8" rx="2" fill="#26241f"/>
+              </g>
+              <g>
+                <circle cx="196" cy="180" r="18" fill="#b08a4e"/>
+                <circle cx="196" cy="180" r="14" fill="#dcbf86"/>
+                <path d="M196 168 L196 180 L205 186" stroke="#6b512a" stroke-width="2" fill="none"/>
+                <rect x="188" y="146" width="16" height="12" rx="2" fill="#8a6f4e"/>
+              </g>
+              <g>
+                <rect x="252" y="152" width="54" height="44" rx="3" fill="#a4493a"/>
+                <circle cx="279" cy="174" r="13" fill="#e3c49a"/>
+                <circle cx="279" cy="174" r="6" fill="#8e3a2c"/>
+              </g>
+              <g>
+                <rect x="338" y="162" width="58" height="34" rx="3" fill="#5b6f6a"/>
+                <rect x="348" y="150" width="26" height="12" rx="2" fill="#445753"/>
+                <circle cx="367" cy="179" r="9" fill="#cfd8d2" opacity=".8"/>
+              </g>
+              <g>
+                <circle cx="438" cy="186" r="11" fill="#d9a34e"/>
+                <rect x="432" y="160" width="12" height="22" rx="2" fill="#a57a35"/>
+              </g>
+              <g fill="#8a6f4e" opacity=".5">
+                <rect x="40" y="240" width="440" height="2"/>
+                <rect x="120" y="270" width="80" height="2"/>
+                <rect x="300" y="286" width="110" height="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="xing-stagger-copy">
+            <h3>在旧货市场，我们找回三台还能用的胶片相机</h3>
+            <p>这一期杏吧图文从一次闲逛开始：摊主说这些相机“当年都是宝贝”，我们买下三台，回家逐一清理、测光、装卷。拍出来的第一组照片不算好，却让我们重新理解了“等一张照片”的心情。</p>
+            <ul class="xing-stagger-list">
+              <li>三台相机的型号、成色与入手价格全记录</li>
+              <li>暗袋、毛刷、气吹：基础清理步骤与常见误区</li>
+              <li>第一卷试拍的失败与惊喜，附样片说明</li>
+            </ul>
+          </div>
+        </article>
+        <article class="xing-stagger-item">
+          <div class="xing-stagger-media">
+            <svg viewBox="0 0 520 330" role="img" aria-label="图文配图：夜晚书桌上的录音设备与耳机，窗外是雨中的城市灯光">
+              <defs>
+                <linearGradient id="xingNight" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#141b24"/>
+                  <stop offset="1" stop-color="#232c38"/>
+                </linearGradient>
+              </defs>
+              <rect width="520" height="330" fill="url(#xingNight)"/>
+              <rect x="0" y="0" width="180" height="330" fill="#0f151d"/>
+              <rect x="22" y="40" width="130" height="150" rx="4" fill="#1c2836"/>
+              <g fill="#f0b184" opacity=".75">
+                <rect x="38" y="70" width="4" height="8"/>
+                <rect x="58" y="96" width="4" height="8"/>
+                <rect x="92" y="66" width="4" height="8"/>
+                <rect x="118" y="110" width="4" height="8"/>
+              </g>
+              <g stroke="#7e8b98" stroke-width="1" opacity=".5">
+                <path d="M28 130 L150 130"/>
+                <path d="M28 150 L150 150"/>
+                <path d="M70 40 L70 190"/>
+              </g>
+              <rect x="188" y="216" width="304" height="26" rx="4" fill="#3a2f2a"/>
+              <rect x="204" y="242" width="14" height="70" fill="#2c2420"/>
+              <rect x="462" y="242" width="14" height="70" fill="#2c2420"/>
+              <g>
+                <rect x="240" y="160" width="96" height="56" rx="6" fill="#4a4038"/>
+                <rect x="252" y="172" width="34" height="16" rx="2" fill="#1d1714"/>
+                <circle cx="312" cy="188" r="9" fill="#c8563a"/>
+                <rect x="258" y="196" width="60" height="3" rx="1.5" fill="#8f8275"/>
+                <rect x="258" y="204" width="42" height="3" rx="1.5" fill="#8f8275"/>
+              </g>
+              <g fill="none" stroke="#5a4a3f" stroke-width="6" stroke-linecap="round">
+                <path d="M382 182 q16 -34 40 -10"/>
+              </g>
+              <path d="M412 162 a26 26 0 0 1 26 30" fill="none" stroke="#5a4a3f" stroke-width="6" stroke-linecap="round"/>
+              <g>
+                <path d="M368 210 q26 -40 52 0" fill="none" stroke="#c8563a" stroke-width="3"/>
+                <path d="M380 210 q14 -20 28 0" fill="none" stroke="#f0b184" stroke-width="2"/>
+              </g>
+              <g fill="#f0b184" opacity=".3">
+                <circle cx="230" cy="70" r="3"/>
+                <circle cx="300" cy="46" r="2.4"/>
+                <circle cx="420" cy="80" r="3"/>
+                <circle cx="470" cy="130" r="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="xing-stagger-copy">
+            <h3>声音采集师的十年：风、雨、地铁与凌晨的菜市场</h3>
+            <p>杏吧对谈栏目这一期没有设置提问提纲。我们把录音笔交给他，让他自己讲。十年里他录过两千多个小时的环境声，最珍贵的一段，是老家院子里那棵杏树在春天落花的声音。</p>
+            <ul class="xing-stagger-list">
+              <li>设备与录音思路：从手机到双耳阵列</li>
+              <li>城市噪音中的“干净时刻”怎么找</li>
+              <li>给新创作者的三条建议：先听，再录</li>
+            </ul>
+          </div>
+        </article>
+        <article class="xing-stagger-item">
+          <div class="xing-stagger-media">
+            <svg viewBox="0 0 520 330" role="img" aria-label="图文配图：木工工作台上排列的刨子、凿子与半成品榫卯结构">
+              <rect width="520" height="330" fill="#efe6d6"/>
+              <rect y="0" width="520" height="96" fill="#e3d7c2"/>
+              <rect x="0" y="96" width="520" height="234" fill="#d8c6a9"/>
+              <rect x="0" y="220" width="520" height="110" fill="#a67d4f"/>
+              <path d="M0 220 L520 220 L520 232 L0 232 Z" fill="#8a6339"/>
+              <g>
+                <rect x="58" y="176" width="150" height="30" rx="5" fill="#6e4e2c"/>
+                <path d="M76 176 L76 146 L116 146 L116 176 Z" fill="#8a6a3d"/>
+                <rect x="80" y="134" width="32" height="12" rx="3" fill="#4f3a21"/>
+                <path d="M150 176 L150 160 L172 160" stroke="#4f3a21" stroke-width="8" fill="none" stroke-linecap="round"/>
+              </g>
+              <g>
+                <rect x="238" y="188" width="118" height="16" rx="3" fill="#8a6a3d"/>
+                <rect x="252" y="160" width="16" height="30" rx="2" fill="#5b4a35"/>
+                <rect x="286" y="154" width="16" height="36" rx="2" fill="#5b4a35"/>
+                <rect x="320" y="160" width="16" height="30" rx="2" fill="#5b4a35"/>
+              </g>
+              <g>
+                <path d="M386 206 L448 206 L448 176 L386 176 Z" fill="#b58a55"/>
+                <path d="M406 176 L406 160 L428 160 L428 176 Z" fill="#c79a61"/>
+                <path d="M416 206 L416 232" stroke="#7a5730" stroke-width="6"/>
+              </g>
+              <g fill="#8a6339" opacity=".7">
+                <circle cx="120" cy="262" r="5"/>
+                <circle cx="148" cy="280" r="3.4"/>
+                <circle cx="330" cy="270" r="4.2"/>
+                <circle cx="410" cy="256" r="3"/>
+              </g>
+              <g stroke="#a67d4f" stroke-width="2" opacity=".6">
+                <path d="M40 300 L480 300"/>
+                <path d="M40 312 L360 312"/>
+              </g>
+            </svg>
+          </div>
+          <div class="xing-stagger-copy">
+            <h3>木作 14 天：把一块料做成能坐十年的椅子</h3>
+            <p>杏吧手作频道年度企划的图文版本。从选料、画线、开榫到上蜡，我们把 14 天的过程拆成 5 个阶段，并附上新手最容易出错的 6 个位置。文中所有步骤均有对应视频，可在杏吧官网检索观看。</p>
+            <ul class="xing-stagger-list">
+              <li>木料干燥度与纹理判断的简易方法</li>
+              <li>榫卯配合的误差控制与修整技巧</li>
+              <li>上蜡与后期保养，附耗材清单</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题 -->
+  <section class="xing-section xing-anchor" id="xing-topics" style="background:#efe7da;">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Series / 专题企划</span>
+        <h2>杏吧专题企划：长期跟踪的内容项目</h2>
+        <p>我们相信好内容需要时间。以下专题由杏吧编辑团队与创作者共同维护，按季度更新，接受社区投票与投稿。</p>
+      </div>
+      <div class="xing-topics-grid">
+        <article class="xing-topic">
+          <span class="xing-topic-status is-updating">持续更新中</span>
+          <h3>城市夜行</h3>
+          <p>记录城市入夜之后的普通人。已更新 3 期，累计观看 372 万次，是杏吧口碑最好的原创企划之一。</p>
+          <ul>
+            <li>第 1 期：夜班公交司机的最后一圈</li>
+            <li>第 2 期：24 小时便利店的第四位店员</li>
+            <li>第 3 期：末班车之后，还有谁在街上</li>
+          </ul>
+        </article>
+        <article class="xing-topic">
+          <span class="xing-topic-status">已完结</span>
+          <h3>手艺现场</h3>
+          <p>六位手艺人的完整工作流程记录，从竹编、修表到皮具制作，是杏吧内容库中最常被收藏的专题。</p>
+          <ul>
+            <li>竹编：从选竹到成器的七十二道工序</li>
+            <li>修表：一枚老机械表的拆解与复原</li>
+            <li>皮具：一只通勤包从裁料到缝线</li>
+          </ul>
+        </article>
+        <article class="xing-topic">
+          <span class="xing-topic-status is-updating">报名开放</span>
+          <h3>创作者扶持计划 · 第二季</h3>
+          <p>面向所有在杏吧发布原创内容的创作者，提供拍摄场地、后期支持与流量扶持，每季 30 个名额。</p>
+          <ul>
+            <li>提交作品与创作计划，截止 12 月 15 日</li>
+            <li>入选者获得官方拍摄与剪辑辅导</li>
+            <li>优秀作品在杏吧官网首页重点推荐</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="xing-section xing-anchor" id="xing-authors">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Creators / 创作者矩阵</span>
+        <h2>杏吧创作者：让专业的人被看见</h2>
+        <p>他们来自不同行业，却共享同一种认真。点击了解更多，查看每位创作者在杏吧的作品与动态。</p>
+      </div>
+      <div class="xing-authors-grid">
+        <article class="xing-author">
+          <div class="xing-avatar" style="background:linear-gradient(135deg,#c8563a,#d99a4e);">周</div>
+          <div>
+            <div class="xing-author-name">灯下老周 <span class="xing-author-field">手艺记录</span></div>
+            <div class="xing-author-nums"><span>作品 46</span><span>粉丝 28.6万</span></div>
+            <p class="xing-author-desc">做了三十六年灯匠，近几年开始用手机拍作坊里的日常。镜头不抖，话不多，但每一帧都带着手的温度。他希望把这门手艺完整留在影像里，让后来的人知道灯是怎么亮的。</p>
+            <button class="xing-author-btn" type="button" data-xing-modal="author">查看创作者档案</button>
+          </div>
+        </article>
+        <article class="xing-author">
+          <div class="xing-avatar" style="background:linear-gradient(135deg,#4d7a3e,#8fb56a);">慢</div>
+          <div>
+            <div class="xing-author-name">慢屋夫妇 <span class="xing-author-field">生活方式</span></div>
+            <div class="xing-author-nums"><span>作品 82</span><span>粉丝 41.2万</span></div>
+            <p class="xing-author-desc">把一间乡村旧屋从废墟改到能住人，全程自己动手。视频里没有滤镜，只有漏雨的屋顶和反复修改的图纸。他们说，慢不是效率低，而是把每一步都做踏实。</p>
+            <button class="xing-author-btn" type="button" data-xing-modal="author">查看创作者档案</button>
+          </div>
+        </article>
+        <article class="xing-author">
+          <div class="xing-avatar" style="background:linear-gradient(135deg,#3f5d7a,#7fa7c7);">岩</div>
+          <div>
+            <div class="xing-author-name">剪辑师阿岩 <span class="xing-author-field">创作幕后</span></div>
+            <div class="xing-author-nums"><span>作品 57</span><span>粉丝 19.8万</span></div>
+            <p class="xing-author-desc">在纪录片行业干了十年剪辑，习惯把工作流拆开讲。他的教程不承诺速成，只给可执行的步骤和真实的失败案例。很多新人是从他的第一条时间线教程入门的。</p>
+            <button class="xing-author-btn" type="button" data-xing-modal="author">查看创作者档案</button>
+          </div>
+        </article>
+        <article class="xing-author">
+          <div class="xing-avatar" style="background:linear-gradient(135deg,#8a5a8f,#c79acb);">糖</div>
+          <div>
+            <div class="xing-author-name">半糖小馆 <span class="xing-author-field">商业观察</span></div>
+            <div class="xing-author-nums"><span>作品 63</span><span>粉丝 24.5万</span></div>
+            <p class="xing-author-desc">经营一家十二平方米的咖啡小店，用视频记下每天的账、进的人和遇上的麻烦。她把成本表公开在每一期说明里，希望让想开店的人少踩几个坑，也让自己更清醒。</p>
+            <button class="xing-author-btn" type="button" data-xing-modal="author">查看创作者档案</button>
+          </div>
+        </article>
+        <article class="xing-author">
+          <div class="xing-avatar" style="background:linear-gradient(135deg,#b07a3c,#e0b877);">坡</div>
+          <div>
+            <div class="xing-author-name">北坡小队 <span class="xing-author-field">户外活动</span></div>
+            <div class="xing-author-nums"><span>作品 38</span><span>粉丝 16.3万</span></div>
+            <p class="xing-author-desc">一支由三名业余登山者组成的小队，专注城市周边路线实测。他们的视频里总有一页装备清单和撤离方案，路线走不通就直说走不通，因此被很多新手当成出门前的参考。</p>
+            <button class="xing-author-btn" type="button" data-xing-modal="author">查看创作者档案</button>
+          </div>
+        </article>
+        <article class="xing-author">
+          <div class="xing-avatar" style="background:linear-gradient(135deg,#4a6b6a,#87a8a4);">声</div>
+          <div>
+            <div class="xing-author-name">声音采集师老林 <span class="xing-author-field">情感故事</span></div>
+            <div class="xing-author-nums"><span>作品 29</span><span>粉丝 12.7万</span></div>
+            <p class="xing-author-desc">十年间录过两千多个小时的环境声，从雨打铁皮到菜市场的早晨。他的视频常常只有画面和声音，却能让评论区安静下来。他说自己不是在创作，只是在把世界调回原声。</p>
+            <button class="xing-author-btn" type="button" data-xing-modal="author">查看创作者档案</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M14 数据榜单 -->
+  <section class="xing-section xing-anchor" id="xing-rank" style="background:#fffdf9;border-top:1px solid var(--xing-line);border-bottom:1px solid var(--xing-line);">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Rank / 数据榜单</span>
+        <h2>杏吧数据榜单：用数据看见好内容</h2>
+        <p>榜单每周一更新，统计口径为杏吧官方网站全端播放、互动与收藏数据，仅统计正版发布内容。</p>
+      </div>
+      <div class="xing-rank-grid">
+        <div class="xing-rank-col">
+          <h3>热度榜 <span>近 7 日播放</span></h3>
+          <ol class="xing-rank-list">
+            <li><span class="xing-rank-num">1</span><span class="xing-rank-name">山野慢活 04｜旧屋改造</span><span class="xing-rank-val">203.5万</span></li>
+            <li><span class="xing-rank-num">2</span><span class="xing-rank-name">一个人做咖啡的第 900 天</span><span class="xing-rank-val">176.2万</span></li>
+            <li><span class="xing-rank-num">3</span><span class="xing-rank-name">城市夜行 03｜末班车之后</span><span class="xing-rank-val">152.8万</span></li>
+            <li><span class="xing-rank-num">4</span><span class="xing-rank-name">《夜行灯匠》纪录短片</span><span class="xing-rank-val">128.6万</span></li>
+            <li><span class="xing-rank-num">5</span><span class="xing-rank-name">剪辑室里的一百个夜晚</span><span class="xing-rank-val">98.3万</span></li>
+          </ol>
+        </div>
+        <div class="xing-rank-col">
+          <h3>新人榜 <span>本月成长最快</span></h3>
+          <ol class="xing-rank-list">
+            <li><span class="xing-rank-num">1</span><span class="xing-rank-name">把阳台改成小菜园</span><span class="xing-rank-val">+3.2万粉</span></li>
+            <li><span class="xing-rank-num">2</span><span class="xing-rank-name">旧书修复的第十二本</span><span class="xing-rank-val">+2.7万粉</span></li>
+            <li><span class="xing-rank-num">3</span><span class="xing-rank-name">拍一条街的一百天</span><span class="xing-rank-val">+2.1万粉</span></li>
+            <li><span class="xing-rank-num">4</span><span class="xing-rank-name">认真做一顿晚饭</span><span class="xing-rank-val">+1.8万粉</span></li>
+            <li><span class="xing-rank-num">5</span><span class="xing-rank-name">骑行通勤实测记录</span><span class="xing-rank-val">+1.4万粉</span></li>
+          </ol>
+        </div>
+        <div class="xing-rank-col">
+          <h3>口碑榜 <span>社区评分</span></h3>
+          <ol class="xing-rank-list">
+            <li><span class="xing-rank-num">1</span><span class="xing-rank-name">《夜行灯匠》</span><span class="xing-rank-val">9.7 分</span></li>
+            <li><span class="xing-rank-num">2</span><span class="xing-rank-name">声音采集师的十年</span><span class="xing-rank-val">9.5 分</span></li>
+            <li><span class="xing-rank-num">3</span><span class="xing-rank-name">旧物修理铺</span><span class="xing-rank-val">9.4 分</span></li>
+            <li><span class="xing-rank-num">4</span><span class="xing-rank-name">早市 5:30</span><span class="xing-rank-val">9.2 分</span></li>
+            <li><span class="xing-rank-num">5</span><span class="xing-rank-name">手艺现场 · 竹编</span><span class="xing-rank-val">9.1 分</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 用户评价 -->
+  <section class="xing-section">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Reviews / 用户评价</span>
+        <h2>杏吧社区评价：来自真实观众的反馈</h2>
+        <p>以下评价来自杏吧官方网站开放评论区，未经删改，仅隐去部分隐私信息。</p>
+      </div>
+      <div class="xing-review-grid">
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>看《夜行灯匠》的时候我妈在旁边站了一会儿，然后说这灯她小时候见过。很难得有一个平台愿意花二十多分钟讲一个不热闹的人。</p>
+          <footer><span class="xing-review-avatar" style="background:#c8563a;">陈</span><span>陈同学 · 南京</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>剪辑教程系列我反复看了三遍。阿岩不会说“很简单”，他会告诉你哪里会卡住、卡住了怎么办。这种坦诚在内容平台上不多见。</p>
+          <footer><span class="xing-review-avatar" style="background:#3f5d7a;">林</span><span>林女士 · 剪辑爱好者</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>从杏吧官网登录进去找片比在别处方便，搜索关键词就能看到正版高清的完整版，没有奇怪的跳转，这一点我挺在意。</p>
+          <footer><span class="xing-review-avatar" style="background:#4d7a3e;">赵</span><span>赵先生 · 会员两年</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>我照着小店的账本那期做了自己的成本表，把外卖抽成和损耗算进去以后，才明白自己之前为什么一直不赚钱。谢谢博主，也谢谢平台把这期放在首页。</p>
+          <footer><span class="xing-review-avatar" style="background:#b07a3c;">吴</span><span>吴女士 · 小店主</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>唯一的建议是希望专题更新提示更明显一点，我经常错过城市夜行的新一期。内容本身没得挑，画面干净，节奏舒服。</p>
+          <footer><span class="xing-review-avatar" style="background:#8a5a8f;">周</span><span>周同学 · 大学生</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>带孩子一起看山野改造那几期，他会问为什么要先做排水。能让孩子对着一间旧房子问问题，我觉得这个平台做得不错。</p>
+          <footer><span class="xing-review-avatar" style="background:#4a6b6a;">沈</span><span>沈先生 · 家长</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>收藏夹里一半是手作频道。视频下面的材料清单写得很细，我照着买了几样工具，第一次做出来的东西虽然歪，但挺开心。</p>
+          <footer><span class="xing-review-avatar" style="background:#c8563a;">何</span><span>何先生 · 手作新手</span></footer>
+        </article>
+        <article class="xing-review">
+          <div class="xing-review-quote">“</div>
+          <p>在社区里发过一条关于老街的投稿，没想到编辑真的回复了，后来还约了一次线下拍摄。被认真对待的感觉，比播放量重要。</p>
+          <footer><span class="xing-review-avatar" style="background:#3f5d7a;">许</span><span>许同学 · 投稿创作者</span></footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M15 深度解析（不少于800字） -->
+  <section class="xing-section xing-depth xing-anchor" id="xing-depth">
+    <div class="xing-container">
+      <span class="xing-section-kicker">Insight / 关键词深度解析</span>
+      <h2>读懂杏吧：一个视频品牌官网为何值得长期被打开</h2>
+      <p>“杏吧”这三个字，既是品牌名，也是一种内容态度：像杏子一样有真实的酸甜，不修饰、不讨好，却耐得住时间。作为杏吧官方网站的内容说明，这一节想认真讲清楚我们在做什么、为什么这样做，以及一个视频品牌的官网，究竟能为你提供什么。</p>
+      <div class="xing-depth-body">
+        <div class="xing-depth-block">
+          <h3>从登录入口到内容现场：官网承载的不只是一个页面</h3>
+          <p>很多人第一次接触杏吧，是从搜索“杏吧登录入口”开始的。但我们更希望，登录之后你看到的不是一个空洞的跳转页，而是一个完整的内容现场。杏吧官方网站把品牌介绍、原创节目、专题企划、创作者档案、社区评价与帮助中心放在同一套叙事里：你能在这里找到正在更新的《城市夜行》，也能看到一位灯匠三十六年的坚持；能读到小店的成本表，也能在评论区留下自己的城市记忆。官网的意义在于稳定与可追溯——每一条内容都有明确的作者、发布时间与正版标识，每一次更新都能在动态区查到记录。对一个持续运营九年的视频品牌来说，这种稳定本身就是内容品质的一部分。</p>
+        </div>
+        <div class="xing-depth-block">
+          <h3>原创与正版：内容生态的底线与上限</h3>
+          <p>杏吧的内容生态建立在两条底线上：原创优先、正版高清。我们与一千三百多位创作者签约或合作，所有节目在发布前都会完成版权确认与画质校验；片头片尾统一标注作者与授权信息，转载需经由官方渠道申请。这不是形式主义。对创作者而言，清晰的版权归属意味着劳动被尊重；对观众而言，正版意味着完整的叙事、干净的画面与可靠的观看体验。杏吧愿意把资源花在这些不那么显眼的地方：一档纪录短片可能拍三个月，一期教程可能要重录四遍，一个专题要经过编辑、作者与社区的三轮校对。上限则来自创作者的多元——我们不做单一品类的堆砌，城市探索、手作现场、商业观察、户外实测、情感影像在同一个平台上并存，彼此补充，才构成了一个有呼吸感的内容社区。</p>
+        </div>
+        <div class="xing-depth-block">
+          <h3>社区如何持续活跃：把观众变成参与者</h3>
+          <p>一个视频品牌官网如果只有播放，很快就会安静下来。杏吧的做法是把互动的入口做得足够具体：每期视频下开放标签投票，专题企划接受社区报名，创作者扶持计划每季公开招募，评论区的优质留言会被编辑整理进下一期内容。我们也在尝试更轻的参与方式——收藏夹自动生成观看清单，复制链接可以直接分享给朋友，遇到问题能在帮助中心找到明确答复。社区不是靠口号维持的，而是靠一次次被回应的体验累积起来的。数据显示，杏吧近一年的月活用户中，有超过四成会在观看后完成收藏或评论，这个比例让我们相信：认真做内容，观众是能感觉到的。这也是我们坚持“用户至上”与“持续运营”的原因——平台的价值不在于某一次爆发，而在于长期可预期地出现在用户的生活里。</p>
+        </div>
+        <div class="xing-depth-block">
+          <h3>品牌故事与未来：把镜头继续交给认真生活的人</h3>
+          <p>杏吧起步于一支三人小组，最初只是想把身边那些“没人拍但值得拍”的人和事记录下来。九年过去，团队变大了，设备换了几轮，但选题标准没变：是否真实、是否有细节、是否愿意为它多等一个晚上。我们做企业动态公示，是想让关心杏吧的人知道内容从哪里来、钱花在哪里；我们做合作品牌墙，是希望与价值观相近的伙伴一起把内容做得更扎实；我们做 FAQ 与投稿入口，是希望每一个想表达的人都能找到开始的方式。未来一年，杏吧会把更多资源投向纪录短片与创作者扶持，也会继续完善官网的观看与检索体验。杏吧官方网站，欢迎你随时回来看看——这里有原创、有正版、有高清，也有一群认真生活的人，正在用自己的方式留下时代的切片。</p>
+        </div>
+        <div class="xing-depth-highlight">
+          关键词自然说明：杏吧官方网站以“杏吧”为品牌核心词，围绕视频内容平台、登录入口、原创正版、创作者社区、企业动态等方向持续输出。我们希望每位访客在搜索杏吧相关入口时，都能抵达一个信息清晰、内容可靠、更新及时的官方页面，而不是被零散的跳转消耗耐心。这也是本页存在的意义：把品牌说清楚，把内容摆出来，把选择权交给你。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + FAQ -->
+  <section class="xing-section xing-anchor" id="xing-news">
+    <div class="xing-container">
+      <div class="xing-section-head">
+        <span class="xing-section-kicker">Updates / 企业动态与帮助</span>
+        <h2>杏吧企业动态与常见问题</h2>
+        <p>官方发布的每一次更新都会在这里留档，帮助中心集中回答登录、观看、投稿与版权相关问题。</p>
+      </div>
+      <div class="xing-split-grid">
+        <div>
+          <h3 style="font-size:19px;font-weight:900;margin-bottom:16px;">企业动态 · 官方发布</h3>
+          <div class="xing-news-list">
+            <article class="xing-news-item">
+              <span class="xing-news-date">2026.11.22</span>
+              <div>
+                <h3>「城市夜行」第 3 期上线，专题页同步改版</h3>
+                <p>新增按城市筛选与创作者简介模块，移动端观看体验同步优化。</p>
+              </div>
+            </article>
+            <article class="xing-news-item">
+              <span class="xing-news-date">2026.11.18</span>
+              <div>
+                <h3>创作者扶持计划第二季开放报名</h3>
+                <p>本季共 30 个名额，提供拍摄场地、后期支持与首页推荐资源。</p>
+              </div>
+            </article>
+            <article class="xing-news-item">
+              <span class="xing-news-date">2026.11.10</span>
+              <div>
+                <h3>正版高清校验流程升级</h3>
+                <p>所有新发布内容增加二次画质与版权核验，平均审核时效缩短至 6 小时。</p>
+              </div>
+            </article>
+            <article class="xing-news-item">
+              <span class="xing-news-date">2026.10.28</span>
+              <div>
+                <h3>帮助中心新增投稿与版权指引</h3>
+                <p>补充投稿格式要求、授权说明与常见驳回原因，方便创作者一次通过。</p>
+              </div>
+            </article>
+          </div>
+          <h3 style="font-size:19px;font-weight:900;margin:28px 0 14px;">合作品牌 · 伙伴</h3>
+          <div class="xing-partner-grid">
+            <div class="xing-partner">城市影像实验室</div>
+            <div class="xing-partner">慢屋建筑工作室</div>
+            <div class="xing-partner">北坡户外装备</div>
+            <div class="xing-partner">半糖咖啡供应链</div>
+          </div>
+        </div>
+        <div class="xing-anchor" id="xing-faq">
+          <h3 style="font-size:19px;font-weight:900;margin-bottom:16px;">常见问题 · FAQ</h3>
+          <div class="xing-faq-list">
+            <details class="xing-faq-item" open>
+              <summary>如何通过杏吧登录入口进入官网？</summary>
+              <p>在浏览器中访问杏吧官方网站首页，点击右上角“登录入口”即可进入登录页面。登录后可使用收藏、评论、投稿等功能，所有内容均为正版高清发布。</p>
+            </details>
+            <details class="xing-faq-item">
+              <summary>杏吧的内容是否全部为原创正版？</summary>
+              <p>杏吧官方发布的节目均经过版权确认与画质校验，片头片尾标注作者与授权信息。转载、商用或二次剪辑需通过官方渠道申请授权。</p>
+            </details>
+            <details class="xing-faq-item">
+              <summary>我可以向杏吧投稿吗？需要什么条件？</summary>
+              <p>可以。任何在杏吧注册的创作者均可投稿，需保证内容原创、画质清晰、无版权争议。投稿入口在页面下方，审核一般需要 3 至 5 个工作日。</p>
+            </details>
+            <details class="xing-faq-item">
+              <summary>专题企划多久更新一次？</summary>
+              <p>不同专题节奏不同。《城市夜行》按季度更新，《手艺现场》已完结，创作者扶持计划每季一次。更新都会在企业动态区公示。</p>
+            </details>
+            <details class="xing-faq-item">
+              <summary>收藏和点赞的数据会保存吗？</summary>
+              <p>登录后收藏与点赞会保存到你的账号，可在个人中心查看观看清单。未登录状态下的操作会在登录后提示是否同步。</p>
+            </details>
+            <details class="xing-faq-item">
+              <summary>遇到无法播放或页面异常怎么办？</summary>
+              <p>建议先刷新页面或更换浏览器，仍无法解决可通过页面下方的反馈入口提交问题，工作人员会在工作日内回复。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 投稿 CTA -->
+  <section class="xing-section" style="padding-top:0;">
+    <div class="xing-container">
+      <div class="xing-submit-band">
+        <div>
+          <h2>把你的现场，交给杏吧</h2>
+          <p>无论是一段街景、一门手艺，还是一家小店的账本，只要真实、有细节，我们都愿意认真看完。创作者扶持计划第二季报名中，欢迎通过杏吧官方网站投稿。</p>
+        </div>
+        <button class="xing-btn-main" type="button" data-xing-modal="submit">我要投稿 →</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="xing-footer">
+  <div class="xing-container">
+    <div class="xing-footer-grid">
+      <div>
+        <div class="xing-footer-brand"><span class="xing-logo-mark">杏</span>杏吧</div>
+        <p>杏吧官方网站，专注原创正版高清视频内容与创作者社区。深耕生活影像与人文记录，持续运营，值得信赖。我们相信真实自有力量，陪伴比热闹更长久。</p>
+      </div>
+      <div>
+        <h3>内容频道</h3>
+        <ul>
+          <li><a href="#xing-focus">焦点推荐</a></li>
+          <li><a href="#xing-videos">热门视频</a></li>
+          <li><a href="#xing-topics">专题企划</a></li>
+          <li><a href="#xing-rank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于杏吧</h3>
+        <ul>
+          <li><a href="#xing-depth">品牌故事</a></li>
+          <li><a href="#xing-authors">创作者矩阵</a></li>
+          <li><a href="#xing-news">企业动态</a></li>
+          <li><a href="#xing-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参与共建</h3>
+        <ul>
+          <li><a href="#" data-xing-modal="submit">内容投稿</a></li>
+          <li><a href="#" data-xing-modal="feedback">意见反馈</a></li>
+          <li><a href="#" data-xing-modal="login">登录入口</a></li>
+          <li><a href="#" data-xing-copy>分享本页</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="xing-footer-bottom">
+      <span>© 2026 杏吧官方网站 · 版权所有 · 持续运营中</span>
+      <span>正版高清 · 原创优先 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗 -->
+<div class="xing-modal" id="xingModal" role="dialog" aria-modal="true" aria-labelledby="xingModalTitle">
+  <div class="xing-modal-card">
+    <button class="xing-modal-close" type="button" id="xingModalClose" aria-label="关闭">✕</button>
+    <h3 id="xingModalTitle">提示</h3>
+    <div id="xingModalBody"></div>
+  </div>
+</div>
+
+<div class="xing-toast" id="xingToast" role="status" aria-live="polite"></div>
+<button class="xing-backtotop" id="xingBackTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('xingToast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('xingBurger');
+  var nav = document.getElementById('xingNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.closest('a')){
+        nav.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 搜索前端反馈 */
+  var searchInput = document.getElementById('xingSearchInput');
+  var searchBtn = document.getElementById('xingSearchBtn');
+  var searchFb = document.getElementById('xingSearchFeedback');
+  function doSearch(){
+    if(!searchInput || !searchFb) return;
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchFb.innerHTML = '试试输入“城市夜行”“灯匠”“手作”或创作者昵称。';
+      searchFb.classList.add('is-active');
+      return;
+    }
+    searchFb.innerHTML = '已在杏吧内容库中检索 <strong>' + escapeHtml(kw) + '</strong>：匹配到专题、视频与创作者共 12 条结果，可在上方导航进入对应板块查看。';
+    searchFb.classList.add('is-active');
+    toast('已为「' + kw + '」展示检索反馈');
+  }
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener('input', function(){
+      if(searchFb && searchInput.value.trim() === '') searchFb.classList.remove('is-active');
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(searchFb && !e.target.closest('.xing-search')) searchFb.classList.remove('is-active');
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-xing-like]');
+    if(likeBtn){
+      var liked = likeBtn.classList.toggle('is-liked');
+      likeBtn.textContent = liked ? '♥' : '♡';
+      likeBtn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      toast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+    }
+    var saveBtn = e.target.closest('[data-xing-save]');
+    if(saveBtn){
+      var saved = saveBtn.classList.toggle('is-saved');
+      saveBtn.textContent = saved ? '★' : '☆';
+      saveBtn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      toast(saved ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    }
+  });
+
+  /* 复制链接 */
+  function copyLink(){
+    var text = '杏吧官方网站｜原创正版高清视频内容与创作者社区';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        toast('分享文案已复制，可粘贴给朋友');
+      }).catch(function(){
+        toast('复制失败，请手动分享本页');
+      });
+    }else{
+      toast('已为你准备分享信息，请手动复制页面地址');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-xing-copy]')){
+      e.preventDefault();
+      copyLink();
+    }
+  });
+
+  /* 弹窗系统 */
+  var modal = document.getElementById('xingModal');
+  var modalTitle = document.getElementById('xingModalTitle');
+  var modalBody = document.getElementById('xingModalBody');
+  var modalClose = document.getElementById('xingModalClose');
+  var lastFocus = null;
+
+  var modalContent = {
+    login: {
+      title: '登录杏吧官方网站',
+      html: '<p>使用你的杏吧账号即可同步收藏、评论与投稿记录。所有内容均为正版高清发布，登录后可获得更完整的观看体验。</p>' +
+            '<div class="xing-modal-field"><label for="xingLoginName">账号 / 手机号</label><input id="xingLoginName" type="text" placeholder="请输入账号"></div>' +
+            '<div class="xing-modal-field"><label for="xingLoginPwd">密码</label><input id="xingLoginPwd" type="password" placeholder="请输入密码"></div>' +
+            '<button class="xing-modal-submit" type="button" data-xing-demo-submit="登录">登录</button>'
+    },
+    submit: {
+      title: '投稿入口 · 创作者扶持计划',
+      html: '<p>欢迎把真实的现场交给杏吧。请简要填写作品信息，编辑团队会在 3 至 5 个工作日内回复。</p>' +
+            '<div class="xing-modal-field"><label for="xingSubmitTitle">作品标题</label><input id="xingSubmitTitle" type="text" placeholder="例如：夜行灯匠"></div>' +
+            '<div class="xing-modal-field"><label for="xingSubmitDesc">作品简介</label><textarea id="xingSubmitDesc" rows="3" placeholder="简单说明拍摄内容、时长与创作初衷"></textarea></div>' +
+            '<button class="xing-modal-submit" type="button" data-xing-demo-submit="提交投稿">提交投稿</button>'
+    },
+    feedback: {
+      title: '意见反馈',
+      html: '<p>你的反馈会直接进入杏吧产品与内容团队的待办清单。我们认真对待每一条建议。</p>' +
+            '<div class="xing-modal-field"><label for="xingFeedbackText">问题或建议</label><textarea id="xingFeedbackText" rows="3" placeholder="请描述你遇到的问题或想提的建议"></textarea></div>' +
+            '<button class="xing-modal-submit" type="button" data-xing-demo-submit="提交反馈">提交反馈</button>'
+    },
+    author: {
+      title: '创作者档案 · 杏吧',
+      html: '<p>杏吧的创作者来自不同行业，却共享同一种认真。每位创作者的完整作品列表、更新节奏与合作方式，均可在其个人主页查看。</p>' +
+            '<p>如果你也希望成为杏吧的签约创作者，可通过投稿入口提交作品，或参与每季开放的创作者扶持计划。</p>' +
+            '<button class="xing-modal-submit" type="button" data-xing-demo-close="知道了">知道了</button>'
+    }
+  };
+
+  function openModal(key){
+    var data = modalContent[key] || modalContent.login;
+    modalTitle.textContent = data.title;
+    modalBody.innerHTML = data.html;
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    var firstInput = modalBody.querySelector('input,textarea,button');
+    if(firstInput) firstInput.focus();
+  }
+  function closeModal(){
+    modal.classList.remove('is-open');
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-xing-modal]');
+    if(trigger){
+      e.preventDefault();
+      openModal(trigger.getAttribute('data-xing-modal'));
+      return;
+    }
+    var demoSubmit = e.target.closest('[data-xing-demo-submit]');
+    if(demoSubmit){
+      e.preventDefault();
+      toast(demoSubmit.getAttribute('data-xing-demo-submit') + '信息已记录，感谢参与');
+      closeModal();
+      return;
+    }
+    var demoClose = e.target.closest('[data-xing-demo-close]');
+    if(demoClose){
+      e.preventDefault();
+      closeModal();
+    }
+  });
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(modal) modal.addEventListener('click', function(e){
+    if(e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  /* 回到顶部 */
+  var backTop = document.getElementById('xingBackTop');
+  function onScroll(){
+    if(!backTop) return;
+    if(window.scrollY > 520) backTop.classList.add('is-show');
+    else backTop.classList.remove('is-show');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  if(backTop) backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
